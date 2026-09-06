@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "redstoneprotect",
+  "version": "${version}",
+
+  "name": "RedstoneProtect",
+  "description": "RedstoneProtect for Fabric",
+  "authors": ["cel20"],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/gfx/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": ["cel20.redProt.client.RedstoneProtectDataGenerator"],
+    "client": ["cel20.redProt.client.RedstoneProtectClient"],
+    "main": ["cel20.redProt.RedstoneProtect"]
+  },
+
+  "mixins": [
+    "redstoneprotect.mixins.json"
+    ,{
+      "config": "redstoneprotect.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
