@@ -20,7 +20,7 @@ public class RedstoneProtect implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        LOGGER = LoggerFactory.getLogger("MeineMod");
+        LOGGER = LoggerFactory.getLogger("RedstoneProtect");
 
         //Command
 
@@ -33,11 +33,11 @@ public class RedstoneProtect implements ModInitializer {
                 toggleRedProt();
 
                 if(redstoneProtected){
-                    context.getSource().sendSuccess(() -> Component.literal("Redstone protection resumed."), true);
+                    context.getSource().sendSuccess(() -> Component.literal("Redstone protection has been resumed."), true);
 
                     LOGGER.info("RedstoneProtect resumed by: {}", context.getSource().getTextName());
                 }else{
-                    context.getSource().sendSuccess(() -> Component.literal("Redstone protection paused."), true);
+                    context.getSource().sendSuccess(() -> Component.literal("Redstone protection has been paused."), true);
 
                     LOGGER.info("RedstoneProtect paused by: {}", context.getSource().getTextName());
                 }

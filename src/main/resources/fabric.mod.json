@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "redstoneprotect",
-  "version": "${version}",
+  "version": "1.0.1",
 
   "name": "RedstoneProtect",
   "description": "RedstoneProtect for Fabric",
